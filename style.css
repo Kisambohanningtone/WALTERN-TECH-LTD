@@ -57,7 +57,74 @@ h1, h2 {
 .nav-cta .btn:hover {
   background: orangered;
 }
+/* Base navbar styling (desktop) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
 
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;       /* Stack logo and links vertically */
+    align-items: flex-start;      /* Align items to the left */
+  }
+
+  .nav-links {
+    flex-direction: column;       /* Stack links vertically */
+    width: 100%;                  /* Full width */
+    gap: 10px;                    /* Smaller gap */
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #f2f2f2;          /* Light background for clarity */
+    border-radius: 5px;
+  }
+
+  .nav-cta {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .nav-cta .btn {
+    width: 100%;                  /* CTA button spans full width */
+    text-align: center;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;              /* Smaller text for tiny screens */
+    padding: 8px;
+  }
+}
 
 /* Dropdown Menu */
 .nav-links li {
