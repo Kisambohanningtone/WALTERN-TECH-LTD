@@ -102,6 +102,68 @@ h1, h2 {
   cursor: pointer;
 }
 
+/* Mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* show hamburger */
+  }
+
+  .nav-links {
+    display: none; /* hide everything initially */
+    flex-direction: column;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+  }
+
+  .nav-links.open {
+    display: flex; /* show all links when hamburger clicked */
+  }
+
+  .nav-links li {
+    width: 100%;
+    position: relative;
+  }
+
+  .nav-links li a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    color: #333;
+  }
+
+  /* Dropdown menu inside mobile */
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    width: 100%;
+    box-shadow: none; /* keep flat look on mobile */
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+  }
+
+  .nav-cta {
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .nav-cta .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .hamburger {
