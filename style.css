@@ -1010,3 +1010,71 @@ body {
 .comment-form button:hover {
   background: #ff9800;
 }
+
+/* Blog Post Layout */
+.post-container {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #1C1C1C; /* matches site theme */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(40,167,69,0.3);
+  color: #fff;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #28A745; /* cheerful green accent */
+  margin-bottom: 1rem;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.post-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+}
+
+.post-content h2 {
+  font-size: 1.6rem;
+  color: #28A745;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.post-content ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.post-content ul li {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+/* CTA at bottom of posts */
+.post-cta {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.post-cta a {
+  background: orange;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.post-cta a:hover {
+  background: darkorange;
+}
