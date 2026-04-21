@@ -11,18 +11,18 @@ h1, h2 {
   font-weight: 700;
 }
 
-/* General navbar styling */
+/* Navbar styling (desktop) */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;          /* clean background */
+  background: #ffffff; /* clean background */
   padding: 12px 24px;
   border-bottom: 1px solid #e0e0e0;
 }
 
 .navbar .logo img {
-  height: 45px;                 /* crisp logo size */
+  height: 45px;
   width: auto;
 }
 
@@ -42,7 +42,7 @@ h1, h2 {
 }
 
 .nav-links li a:hover {
-  color: #007bff;               /* highlight color */
+  color: #007bff;
 }
 
 .nav-cta .btn {
@@ -59,26 +59,93 @@ h1, h2 {
   background: darkorange;
 }
 
-/* ✅ Mobile responsiveness */
+/* Dropdown menu (desktop) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background: #f2f2f2;
+  color: #007bff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;     /* stack logo + links */
-    align-items: flex-start;
+  .hamburger {
+    display: block;
   }
 
   .nav-links {
-    flex-direction: column;     /* vertical links */
+    display: none;
+    flex-direction: column;
     width: 100%;
-    gap: 12px;
+    background: #ffffff;
+    border-top: 1px solid #ddd;
     margin-top: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
   }
 
   .nav-links li a {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    display: none;
+    flex-direction: column;
     background: #f9f9f9;
-    border-radius: 4px;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
   }
 
   .nav-cta {
@@ -87,12 +154,11 @@ h1, h2 {
   }
 
   .nav-cta .btn {
-    width: 100%;                /* full width CTA */
+    width: 100%;
     text-align: center;
   }
 }
 
-/* ✅ Extra small screens */
 @media (max-width: 480px) {
   .navbar {
     padding: 8px 16px;
@@ -109,70 +175,6 @@ h1, h2 {
   }
 }
 
-
-/* Dropdown menu styling */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;              /* place below the parent link */
-  left: 0;
-  background: #ffffff;    /* solid white background */
-  border: 1px solid #ddd; /* light border for separation */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  min-width: 180px;       /* consistent width */
-  z-index: 999;           /* ensures it sits above other content */
-}
-
-.dropdown-menu li {
-  width: 100%;
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 10px 15px;
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.dropdown-menu li a:hover {
-  background: #f2f2f2;    /* highlight on hover */
-  color: #007bff;         /* cheerful blue accent */
-}
-
-/* Show dropdown on hover (desktop) */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .dropdown-menu {
-    position: static;     /* stack inside flow */
-    box-shadow: none;
-    border: none;
-    min-width: 100%;
-  }
-
-  .dropdown-menu li a {
-    padding: 12px;
-    background: #f9f9f9;
-    border-bottom: 1px solid #eee;
-  }
-
-  .dropdown-menu li a:hover {
-    background: #eaeaea;
-  }
-}
-
-
 /* Hero Section */
 .hero {
   height: 100vh;
@@ -188,7 +190,7 @@ h1, h2 {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #28A745; /* Success Green */
+  color: #28A745;
 }
 
 .hero p {
@@ -300,7 +302,7 @@ h1, h2 {
 }
 
 .footer-column h3 {
-  color: #28a745; /* green accent */
+  color: #28a745;
   margin-bottom: 1rem;
 }
 
@@ -315,12 +317,12 @@ h1, h2 {
 }
 
 .footer-column ul li a {
-  color: #007bff; /* blue accent */
+  color: #007bff;
   text-decoration: none;
 }
 
 .footer-column ul li a:hover {
-  color: #ff9800; /* orange hover */
+  color: #ff9800;
 }
 
 .footer-bottom {
@@ -330,6 +332,7 @@ h1, h2 {
   padding-top: 1rem;
   color: #aaa;
 }
+
 
 
 /* Auth Pages (Login & Signup) */
