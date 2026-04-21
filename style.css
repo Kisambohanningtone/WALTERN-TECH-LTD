@@ -110,38 +110,68 @@ h1, h2 {
 }
 
 
-/* Dropdown Menu */
-.nav-links li {
+/* Dropdown menu styling */
+.dropdown {
   position: relative;
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100%;              /* place below the parent link */
   left: 0;
-  background: #1C1C1C;
-  border-radius: 8px;
+  background: #ffffff;    /* solid white background */
+  border: 1px solid #ddd; /* light border for separation */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
   list-style: none;
-  padding: 0.5rem 0;
-  min-width: 200px;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 180px;       /* consistent width */
+  z-index: 999;           /* ensures it sits above other content */
+}
+
+.dropdown-menu li {
+  width: 100%;
 }
 
 .dropdown-menu li a {
   display: block;
-  padding: 0.5rem 1rem;
-  color: green;
+  padding: 10px 15px;
+  color: #333;
   text-decoration: none;
-  transition: background 0.3s;
+  font-weight: 500;
 }
 
 .dropdown-menu li a:hover {
-  background: orangered;
+  background: #f2f2f2;    /* highlight on hover */
+  color: #007bff;         /* cheerful blue accent */
 }
 
+/* Show dropdown on hover (desktop) */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .dropdown-menu {
+    position: static;     /* stack inside flow */
+    box-shadow: none;
+    border: none;
+    min-width: 100%;
+  }
+
+  .dropdown-menu li a {
+    padding: 12px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+  }
+
+  .dropdown-menu li a:hover {
+    background: #eaeaea;
+  }
+}
+
 
 /* Hero Section */
 .hero {
