@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integration Guides - Waltern Tech LTD</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/waltern.png" alt="Waltern Tech Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="why.html">Why Waltern Tech</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li class="dropdown">
+        <a href="#resources">Resources ▼</a>
+        <ul class="dropdown-menu">
+          <li><a href="integration.html" class="active">Integration Guides</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </li>
+      <li><a href="login.html">Log in</a></li>
+      <li><a href="signup.html">Sign up</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn">Contact Sales</a>
+    </div>
+  </nav>
+
+  <!-- Integration Guides -->
+  <section class="integration-guides">
+    <h1>Integration Guides</h1>
+    <p>Step‑by‑step instructions to integrate Waltern Tech LTD services into your applications.</p>
+
+    <!-- M-Pesa Daraja API Integration -->
+    <section class="integration-block">
+      <div class="icon">💰</div>
+      <h2>M‑Pesa Daraja API Integration</h2>
+      <p>Follow these steps to integrate M‑Pesa Daraja API into your application.</p>
+
+      <section class="integration-section">
+        <div class="icon">📝</div>
+        <h3>Step 1 – Register App</h3>
+        <p>Sign up on Safaricom Daraja portal and get credentials.</p>
+      </section>
+
+      <section class="integration-section">
+        <div class="icon">🔑</div>
+        <h3>Step 2 – Configure Keys</h3>
+        <p>Add consumer key and secret to your environment variables.</p>
+      </section>
+
+      <section class="integration-section">
+        <div class="icon">⚡</div>
+        <h3>Step 3 – Generate Token</h3>
+        <p>Use CURL or Postman to request an access token.</p>
+      </section>
+
+      <section class="integration-section">
+        <div class="icon">📲</div>
+        <h3>Step 4 – Initiate STK Push</h3>
+        <p>Send payment request with phone number, amount, and callback URL.</p>
+        <pre>
+          curl -X POST https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest \
+          -H "Authorization: Bearer {token}" \
+          -d '{ ... }'
+        </pre>
+      </section>
+
+      <section class="integration-section">
+        <div class="icon">💻</div>
+        <h3>Step 5 – Handle Callback</h3>
+        <p>Capture transaction response and update your database.</p>
+      </section>
+    </section>
+
+    <!-- POS Integration -->
+    <section class="integration-block">
+      <div class="icon">🧾</div>
+      <h2>POS System Integration</h2>
+      <p>Connect Waltern Tech POS with your inventory and sales systems:</p>
+      <ul>
+        <li>Install Waltern POS SDK.</li>
+        <li>Configure database connection (MySQL/PostgreSQL).</li>
+        <li>Enable real‑time sales tracking via API endpoints.</li>
+        <li>Generate daily reports automatically.</li>
+      </ul>
+    </section>
+
+    <!-- Merchant Dashboard Integration -->
+    <section class="integration-block">
+      <div class="icon">📊</div>
+      <h2>Merchant Dashboard Integration</h2>
+      <p>Embed Waltern Tech dashboards into your admin panel:</p>
+      <ul>
+        <li>Use our REST API to fetch sales and customer analytics.</li>
+        <li>Authenticate with OAuth2 for secure access.</li>
+        <li>Render charts using Chart.js or D3.js.</li>
+      </ul>
+    </section>
+  </section>
+
+ <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Waltern Tech LTD</h3>
+        <p>00100 Nairobi, Kenya</p>
+        <p>📍 Global Reach: Africa, Europe, North America</p>
+      </div>
+      <div class="footer-column">
+        <h3>Products</h3>
+        <ul>
+          <li>Enterprise Websites</li>
+          <li>Smart POS Systems</li>
+          <li>Payment Integration</li>
+          <li>E-Commerce Stores</li>
+          <li>Business Automation</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>For Developers</h3>
+        <ul>
+          <li>API Documentation</li>
+          <li>Integration Guides</li>
+          <li>Sandbox Testing</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="company.html">Company</a></li>
+          <li><a href="why.html">Why Waltern Tech</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Compliance</h3>
+        <ul>
+          <li>Data Security</li>
+          <li>Privacy Policy</li>
+          <li>Whistleblower@walterntech.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Waltern Tech LTD. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
