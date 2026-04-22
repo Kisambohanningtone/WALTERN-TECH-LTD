@@ -19,9 +19,9 @@ html, body {
 /* Navbar styling (desktop) */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo left, links + CTA right */
   align-items: center;
-  background: #ffffff; /* clean background */
+  background: #fffffF; /* clean background */
   padding: 12px 24px;
   border-bottom: 1px solid #e0e0e0;
 }
@@ -31,13 +31,14 @@ html, body {
   width: auto;
 }
 
+/* Nav links */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 24px;
   margin: 0;
   padding: 0;
-   flex: 1; /* take available space */
+  flex: 1; /* take available space */
   justify-content: flex-end; /* push links + CTA to the right */
 }
 
@@ -52,6 +53,11 @@ html, body {
   color: #007bff;
 }
 
+/* CTA button */
+.nav-cta {
+  margin-left: 20px; /* ensures spacing so it never attaches to logo */
+}
+
 .nav-cta .btn {
   background: orange;
   color: #fff;
@@ -64,8 +70,8 @@ html, body {
 
 .nav-cta .btn:hover {
   background: darkorange;
-  margin-left: 20px; /* spacing so it never attaches to logo */
 }
+
 
 /* Dropdown menu (desktop) */
 .dropdown {
