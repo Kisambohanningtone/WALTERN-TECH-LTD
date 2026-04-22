@@ -11,6 +11,11 @@ h1, h2 {
   font-weight: 700;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* stops sideways movement */
+}
+
 /* Navbar styling (desktop) */
 .navbar {
   display: flex;
@@ -123,7 +128,6 @@ h1, h2 {
 
   .nav-links li {
     width: 100%;
-    position: relative;
   }
 
   .nav-links li a {
@@ -141,7 +145,6 @@ h1, h2 {
     flex-direction: column;
     background: #f9f9f9;
     border: 1px solid #ddd;
-    margin-top: 5px;
     width: 100%;
     box-shadow: none;
   }
@@ -181,7 +184,7 @@ h1, h2 {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  min-height: 100vh; /* allow vertical scrolling */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -216,6 +219,7 @@ h1, h2 {
 /* Three Pillars Section */
 .pillars {
   display: flex;
+  flex-wrap: wrap; /* ensures vertical stacking on small screens */
   justify-content: space-around;
   align-items: stretch;
   padding: 4rem 2rem;
@@ -224,7 +228,8 @@ h1, h2 {
 
 .pillar {
   flex: 1;
-  margin: 0 1rem;
+  min-width: 250px; /* prevents overflow */
+  margin: 1rem;
   background: #1C1C1C;
   border-radius: 20px;
   padding: 2rem;
