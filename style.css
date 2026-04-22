@@ -77,20 +77,18 @@ html, body {
 .dropdown {
   position: relative;
 }
+.dropdown.open .dropdown-menu {
+  display: block;
+}
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background: #ffffff;
-  border: 1px solid #ddd;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #fff;
   list-style: none;
-  padding: 10px 0;
+  padding: 10px;
   margin: 0;
-  min-width: 180px;
-  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .dropdown-menu li a {

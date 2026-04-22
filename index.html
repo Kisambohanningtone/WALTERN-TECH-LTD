@@ -24,15 +24,16 @@
       <li><a href="why.html">Products</a></li>
       <li><a href="why.html">Why Waltern Tech</a></li>
       <li class="dropdown">
-        <a href="#" onclick="this.parentElement.classList.toggle('open'); return false;">Resources ▼</a>
+       <a href="#" onclick="toggleDropdown(event)">Resources ▼</a>
         <ul class="dropdown-menu">
-          <li><a href="company.html">Company</a></li>
-          <li><a href="integration.html">Integration Guides</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </li>
+         <li><a href="company.html">Company</a></li>
+         <li><a href="integration.html">Integration Guides</a></li>
+         <li><a href="support.html">Support</a></li>
+         <li><a href="blog.html">Blog</a></li>
+         <li><a href="faq.html">FAQ</a></li>
+       </ul>
+     </li>
+
 
       <li><a href="login.html">Log in</a></li>
       <li><a href="signup.html">Sign up</a></li>
@@ -149,5 +150,13 @@
       </div>
     </div>
   </footer>
+  <script>
+    function toggleDropdown(event) {
+     event.preventDefault();
+     const parent = event.target.parentElement;
+      parent.classList.toggle('open');
+    }
+  </script>
+
 </body>
 </html>
