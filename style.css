@@ -15,7 +15,6 @@ html, body {
   width: 100%;
   overflow-x: hidden; /* stops sideways movement */
 }
-
 /* Navbar container */
 .navbar {
   display: flex;
@@ -25,6 +24,14 @@ html, body {
   padding: 0.8rem 2rem;
   position: relative;
   z-index: 1000; /* keep navbar above page content */
+}
+
+/* Logo */
+.navbar .logo img {
+  height: 45px;       /* fixed height */
+  width: auto;        /* keep aspect ratio */
+  max-width: 150px;   /* prevent logo from stretching too wide */
+  object-fit: contain;
 }
 
 /* Nav links */
@@ -83,6 +90,11 @@ html, body {
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.nav-cta .btn:hover {
+  background: darkorange;
 }
 
 
