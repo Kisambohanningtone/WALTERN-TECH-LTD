@@ -16,80 +16,45 @@ html, body {
   overflow-x: hidden; /* stops sideways movement */
 }
 
-/* Navbar styling (desktop) */
+/* Navbar container */
 .navbar {
   display: flex;
-  justify-content: space-between; /* logo left, links + CTA right */
   align-items: center;
-  background: #fffffF; /* clean background */
-  padding: 12px 24px;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-.navbar .logo img {
-  height: 45px;
-  width: auto;
+  justify-content: space-between;
+  background: #fff; /* or your theme color */
+  padding: 0.8rem 2rem;
+  position: relative;
+  z-index: 1000; /* keep navbar above page content */
 }
 
 /* Nav links */
 .nav-links {
   display: flex;
+  align-items: center;
+  gap: 1.5rem;
   list-style: none;
-  gap: 24px;
   margin: 0;
   padding: 0;
-  flex: 1; /* take available space */
-  justify-content: flex-end; /* push links + CTA to the right */
-}
-
-.nav-links li a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #007bff;
-}
-
-/* CTA button */
-.nav-cta {
-  margin-left: 40px; /* ensures spacing so it never attaches to logo */
-}
-
-.nav-cta .btn {
-  background: orange;
-  color: #fff;
-  padding: 10px 18px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.nav-cta .btn:hover {
-  background: darkorange;
 }
 
 /* Dropdown container */
 .dropdown {
-  position: relative; /* anchor menu to parent */
+  position: relative;
 }
 
 /* Dropdown menu hidden by default */
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;          /* place directly below the parent link */
+  top: 100%;   /* directly below Resources link */
   left: 0;
   background: #fff;
   list-style: none;
   padding: 10px 0;
   margin: 0;
-  min-width: 200px;   /* consistent width */
+  min-width: 200px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  z-index: 9999;      /* ensures menu stays above page content */
+  z-index: 9999; /* ensures dropdown stays above page content */
 }
 
 /* Show menu when .open is toggled */
@@ -109,6 +74,15 @@ html, body {
 .dropdown-menu li a:hover {
   background: #f2f2f2;
   color: #007bff;
+}
+
+/* CTA button */
+.nav-cta .btn {
+  background: orange;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
 
