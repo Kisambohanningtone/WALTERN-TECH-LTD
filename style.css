@@ -55,7 +55,7 @@ html, body {
 
 /* CTA button */
 .nav-cta {
-  margin-left: 20px; /* ensures spacing so it never attaches to logo */
+  margin-left: 40px; /* ensures spacing so it never attaches to logo */
 }
 
 .nav-cta .btn {
