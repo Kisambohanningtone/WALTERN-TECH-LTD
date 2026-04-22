@@ -37,6 +37,8 @@ html, body {
   gap: 24px;
   margin: 0;
   padding: 0;
+   flex: 1; /* take available space */
+  justify-content: flex-end; /* push links + CTA to the right */
 }
 
 .nav-links li a {
@@ -62,6 +64,7 @@ html, body {
 
 .nav-cta .btn:hover {
   background: darkorange;
+  margin-left: 20px; /* spacing so it never attaches to logo */
 }
 
 /* Dropdown menu (desktop) */
@@ -103,10 +106,12 @@ html, body {
 /* Hamburger icon */
 .hamburger {
   display: none;
-  font-size: 28px;
+  font-size: 32px;   /* slightly larger for visibility */
   cursor: pointer;
-  color: #000; /* black color */
+  color: #000 !important; /* force black color */
+  font-weight: bold; /* makes the lines thicker */
 }
+
 
 
 /* Mobile view */
