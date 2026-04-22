@@ -72,30 +72,38 @@ html, body {
   background: darkorange;
 }
 
-
-/* Dropdown menu (desktop) */
+/* Dropdown container */
 .dropdown {
-  position: relative;
+  position: relative; /* anchor menu to parent */
 }
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;          /* place directly below the parent link */
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 200px;   /* consistent width */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 9999;      /* ensures menu stays above page content */
+}
+
+/* Show menu when .open is toggled */
 .dropdown.open .dropdown-menu {
   display: block;
 }
 
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  background: #fff;
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
+/* Dropdown links */
 .dropdown-menu li a {
   display: block;
   padding: 10px 15px;
   color: #333;
   text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .dropdown-menu li a:hover {
@@ -103,9 +111,6 @@ html, body {
   color: #007bff;
 }
 
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
 
 /* Hamburger icon */
 .hamburger {
